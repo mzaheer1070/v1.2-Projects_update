@@ -1,0 +1,163 @@
+:root {
+    --bg: #0f1419;
+    --surface: #1a2229;
+    --text: #f2f5f7;
+    --muted: #9aa8b5;
+    --primary: #35b9bc;
+    --accent: #ff8a6f;
+    --border: #2d3842;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+.portfolio-bridge {
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--surface) 96%, transparent);
+}
+
+.portfolio-bridge-inner {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+}
+
+.bridge-brand {
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.bridge-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.bridge-nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 800;
+    padding: 8px 10px;
+    border-radius: var(--radius);
+}
+
+.bridge-nav a:hover {
+    color: var(--text);
+    background: var(--bg);
+}
+
+.bridge-badge {
+    margin-left: auto;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.site-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 20px 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.site-bar a {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.back-link {
+    color: var(--primary);
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 640px) {
+    .bridge-badge {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.app-wrap {
+    width: min(720px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+
+.app-wrap h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 8px;
+}
+
+.app-wrap > p {
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+button,
+input,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: #0f1419;
+    font-weight: 800;
+    padding: 10px 16px;
+}
+
+button:hover {
+    filter: brightness(1.08);
+}
+
+input,
+select {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    padding: 11px 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+}
